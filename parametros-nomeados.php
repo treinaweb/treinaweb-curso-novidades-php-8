@@ -3,18 +3,18 @@
 class Carro {
     public function __construct(
         protected string $marca, 
-        protected string $cor
+        protected string $cor,
     ){}
 
-    public function andar(int $aceleracao, int $velocidadeMaxima)
+    public function andar(int $aceleracao, int $velocidadeMaxima,)
     {
         echo $aceleracao . ' ' . $velocidadeMaxima;
     }
 }
 
-$uno = new Carro(marca: 'Fiat', cor: 'Preto');
+$uno = new Carro('Fiat', 'Preto',);
 
-$uno->andar(velocidadeMaxima: 110, aceleracao: 5);
+$uno->andar(velocidadeMaxima: 110, aceleracao: 5,);
 
 echo "<br>";
 var_dump($uno);
