@@ -2,14 +2,16 @@
 
 declare(strict_types=1);
 
+class Marca{}
+
 class Carro {
     public function __construct(
-        protected string $marca, 
+        protected string|Marca $marca, 
         protected string $cor,
     ){}
 
     public function andar(
-        int|string $aceleracao, 
+        int|string|null $aceleracao=null, 
         int|string $velocidadeMaxima,
     ): string|float {
         return $aceleracao . ' ' . $velocidadeMaxima;
